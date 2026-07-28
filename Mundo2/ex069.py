@@ -5,6 +5,8 @@ sexo = control = ''
 while control != 'N': 
     idade = int(input(f"Pessoa {registro}, qual a sua idade? ")) 
     sexo = str(input(f"Pessoa {registro}, qual o seu sexo? [M/F] ")).upper().strip() 
+    while sexo != 'F' and sexo != 'M': 
+        sexo = str(input(f"Pessoa {registro}, qual o seu sexo? [M/F] ")).upper().strip() 
 
     if idade > 18: 
         contIdade += 1
@@ -16,6 +18,8 @@ while control != 'N':
         mulher20 += 1 
 
     control = str(input("Deseja registrar mais pessoas? [S/N] ")).upper().strip() 
+    while control != 'S' and control != 'N': 
+        control = str(input("Deseja registrar mais pessoas? [S/N] ")).upper().strip()
 
     if control == 'N': 
         break; 
