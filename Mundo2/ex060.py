@@ -11,6 +11,12 @@ elif num == 0 or num == 1:
 
 else:
     while (aux-1) > 0: 
-        resultado = resultado * (aux*(aux-1)) 
-        aux = aux - 2 
-    print(f"O fatorial de {num} é {resultado}.")
+        resultado = resultado * aux 
+        aux = aux - 1 
+    for c in range(num, 0, -1): 
+        if c == 1:
+            print(c, end='')
+        else:
+            print(f"{c} x", end=' ') 
+
+    print(f"\nO fatorial de {num} é {resultado}.")
