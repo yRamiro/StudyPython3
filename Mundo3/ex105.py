@@ -1,6 +1,12 @@
 # ANALISANDO E GERANDO DICIONÁRIOS # 
 
 def notas(*nota, sit=False): 
+    """ -> Função para analisar diversas notas, retornando a quantidade, a maior nota, a menor nota, a media e a situação (opcional).
+    :parâmetro *nota: Uma ou mais notas; 
+    :parâmetro sit: Mostra a situação do aluno (opcional);
+    :return: Retorno do dicionário com base nas notas inseridas.
+    """
+    
     if not nota: 
         return {'Quantidade de notas': 0, 'Maior nota': 0, 'Menor nota': 0, 'Media': 0.0}
     
@@ -21,4 +27,5 @@ def notas(*nota, sit=False):
 
     return print(f'{valores}')
 
-resp = notas(7.8, 7.1, 7.8, sit=True) 
+# help(notas)
+resp = notas(7.8, 7.1, 7.8, sit=True)  
